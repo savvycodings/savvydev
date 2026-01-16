@@ -1,0 +1,421 @@
+@font-face {
+    font-family: 'Primary';
+    src: url('./fonts/redhat-medium.woff2') format('woff2'),
+        url('./fonts/redhat-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --primary: #f0f0f0;
+    --secondary: #111111;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html {
+    font-size: calc(100vw / 1920 * 10);
+}
+body {
+    font-family: 'Primary';
+}
+
+h1 {
+    font-size: 12rem;
+}
+h2 {
+    font-size: 12rem;
+}
+h3 {
+    font-size: 6.4rem;
+}
+p,
+span {
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+/*?---------> Lenis CSS Settings */
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+.app {
+    position: relative;
+    background-color: var(--primary);
+    color: var(--secondary);
+    overflow: hidden;
+}
+
+/*? -----> Intro | Awwwards Rebuild part 1 */
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 11, 11, 0.75) 0%, var(--secondary) 100%);
+}
+.intro_one {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+.intro_two {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+.intro_card {
+    width: 96rem;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--primary);
+    padding: 16rem;
+}
+.intro_two .intro_card {
+    height: 200rem;
+}
+.intro_card_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18rem;
+    height: inherit;
+    padding: 3.2rem 6.4rem;
+    text-align: center;
+}
+.intro_card_caption span {
+    display: block;
+}
+.intro_card_description p {
+    text-align: justify;
+}
+
+.intro_media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.intro_media_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*? -----> Gallery */
+.gallery {
+    position: relative;
+    height: 300vh;
+    background-color: var(--secondary);
+}
+.gallery_wrapper {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: 10;
+}
+.gallery_media {
+    position: absolute;
+}
+.gallery_media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery_media:nth-child(1) {
+    left: 4%;
+    top: 4%;
+    width: 16rem;
+    height: 24rem;
+}
+.gallery_media:nth-child(2) {
+    right: 2%;
+    top: 8%;
+    width: 32rem;
+    height: 48rem;
+}
+.gallery_media:nth-child(3) {
+    right: 24%;
+    top: 48%;
+    width: 24rem;
+    height: 48rem;
+}
+.gallery_media:nth-child(4) {
+    left: 8%;
+    top: 24%;
+    width: 32rem;
+    height: 48rem;
+}
+.gallery_media:nth-child(5) {
+    left: 8%;
+    top: 64%;
+    width: 32rem;
+    height: 48rem;
+}
+
+.gallery_text {
+    position: relative;
+    height: 100vh;
+    z-index: 20;
+}
+.gallery_text_items {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 12rem;
+    line-height: 12rem;
+
+    text-align: center;
+    color: var(--primary);
+    overflow: hidden;
+}
+.gallery_text_items::before {
+    content: '(';
+    position: absolute;
+    top: 0;
+    left: 25rem;
+    font-size: 12rem;
+}
+.gallery_text_items::after {
+    content: ')';
+    position: absolute;
+    top: 0;
+    right: 25rem;
+    font-size: 12rem;
+}
+
+/*? -----> Connect | Awwwards Rebuild part 2*/
+.connect {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.connect_wrapper {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    gap: 8rem;
+    padding: 12rem;
+}
+.connect_title {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+}
+.connect_caption span {
+    display: block;
+}
+
+.connect_media {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.connect_media.image--front {
+    left: 72rem;
+    z-index: 2;
+}
+.connect_media.image--back {
+    right: 72rem;
+    z-index: 1;
+}
+.connect_media img {
+    width: 48rem;
+    height: 64rem;
+    object-fit: cover;
+}
+
+/*? -----> Horizontal | Awwwards Rebuild part 3*/
+.horizontal {
+    position: relative;
+    width: max-content;
+    height: 100vh;
+}
+.horizontal_wrapper {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+}
+.horizontal_box {
+    position: relative;
+    width: 100vw;
+    height: inherit;
+    overflow: hidden;
+}
+.horizontal_box.horizontal_box--full {
+    width: 80vw;
+}
+.horizontal_box.horizontal_box--vertical {
+    width: 30vw;
+    height: 200vh;
+    background-color: white;
+    padding: 6.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8rem;
+}
+.horizontal_box_title {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    z-index: 10;
+    color: var(--primary);
+}
+.horizontal_box--vertical .horizontal_box_title {
+    color: var(--secondary);
+}
+.horizontal_box_paragraph {
+    display: flex;
+    gap: 2rem;
+}
+.horizontal_box_media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    z-index: 1;
+}
+.horizontal_box_media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.horizontal_box_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+.horizontal_box.horizontal_box--end {
+    width: 100vw;
+}
+.horizontal_box--end .horizontal_box_title {
+    color: var(--secondary);
+}
+
+.outro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.outro_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 6.4rem;
+}
+.outro_titles,
+.outro_description,
+.outro_caption {
+    text-align: center;
+}
+.outro_caption span {
+    display: block;
+}
+
+/*? -----> Responsive */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: calc(100vw / 768 * 10);
+    }
+    h2 {
+        font-size: 6rem;
+    }
+    p,
+    span {
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+
+    /*? -----> Intro | Awwwards Rebuild part 1*/
+    .intro {
+        padding-top: 25rem;
+    }
+    .intro_card {
+        width: 64rem;
+        padding: 0 2rem;
+    }
+    .intro_one {
+        height: 100%;
+    }
+
+    .gallery_text_wrapper {
+        text-align: center;
+        gap: 8rem;
+        height: 12rem;
+        overflow: hidden;
+    }
+    .gallery_text_items::before {
+        left: 6.4rem;
+        font-size: 6rem;
+    }
+    .gallery_text_items::after {
+        right: 6.4rem;
+        font-size: 6rem;
+    }
+
+    /*? -----> Connect | Awwwards Rebuild part 2*/
+    .connect_media.image--front {
+        left: 14.5rem;
+    }
+    .connect_media.image--back {
+        right: 14.5rem;
+    }
+
+    /*? -----> Horizontal | Awwwards Rebuild part 3*/
+    .horizontal {
+        width: 100%;
+        height: 100%;
+    }
+    .horizontal_wrapper {
+        flex-direction: column;
+    }
+    .horizontal_box {
+        width: 100%;
+        height: 60rem;
+    }
+    .horizontal_box.horizontal_box--full {
+        width: inherit;
+        height: 100rem;
+    }
+    .horizontal_box.horizontal_box--vertical {
+        width: inherit;
+        height: 100%;
+    }
+}

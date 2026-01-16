@@ -1,0 +1,13 @@
+{
+  "name": "scdp-01",
+  "version": "1.0.0",
+  "description": "WADM - SCDP.01",
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite",
+    "preview": "npx vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
